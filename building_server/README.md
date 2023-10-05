@@ -26,7 +26,10 @@
 
 ## Day 2: 
 
-1. In Laravel you create applications based upon MVC Architecture. 
+1. In Laravel you create applications based upon MVC Architecture. Read my blog on
+   MVC architecture here: ______-----.
+2. How to user Services like authentication and routing? 
+    Using the bind method or serviceprovider class.
 3. What is middleware ?
     Middleware acts as a security guard for your server. It sanitizes and filters 
     incoming requests to your server. After this it sends the requests to the
@@ -35,7 +38,19 @@
     Middleware contains 2 funtions
     1. handle(): Accepts request and closure as arguments. Perform checks 
     inside the function and then pass the request to the closure or redirect if checks failed. 
-    2. terminate(): 
+    2. terminate(): Terminate function is executed after serving a request.
+    Similar to when you hit GET /home, this request goes through each middleware
+    and then home page is displayed, now terminate function on middleware
+    will be executed in the opposite direction.
+    GET /Home -> 
+        handle() middleware1 -> 
+            handle() middleware2 -> 
+                handle() middleware3 -> 
+                    response returned to user -> 
+                        terminate() of middleware13 -> 
+                            terminate() of middleware2 -> 
+                                terminate() of middleware1.
+
 4. What is Singleton pattern?
     When you want to use "Single instance" of that class everywhere. Basically you
     want everyone to "Share the same instance" of a class. Then we use
@@ -43,7 +58,6 @@
 5. What is a Bind pattern?
     When you want to use "Different instance" or new instance of a class every time.
     Here new instance of the class is created each time.
-6. What is kernel in laravel ?
-7. What is Closure?
+6. What is Closure? Closure is an anonymous function in php
 
 

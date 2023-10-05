@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Services\Geolocation;
-use App\Servies\Satellite\Satellite;
+use App\Services\Satellite\Satellite;
 use App\Services\Map\Map;
 
 class Geolocation{

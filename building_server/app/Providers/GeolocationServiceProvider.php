@@ -4,10 +4,10 @@ namespace App\Providers;
 
 use App\Services\Geolocation\Geolocation;
 use App\Services\Map\Map;
-use App\Servies\Satellite\Satellite;
+use App\Services\Satellite\Satellite;
 use Illuminate\Support\ServiceProvider;
 
-class GeolocationServieProvider extends ServiceProvider
+class GeolocationServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
